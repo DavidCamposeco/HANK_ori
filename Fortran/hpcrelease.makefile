@@ -3,8 +3,6 @@ FCFLAGS = -m64 -traceback -O3 -qopenmp -implicitnone -xSSE4.2 -axAVX  -L${SUITES
 LDFLAFS = -m64 -traceback -O3 -qopenmp -implicitnone -xSSE4.2 -axAVX  -L${SUITESPARSE_LIB} -lumfpack -lamd -lcholmod -lcolamd -lsuitesparseconfig -L${LAPACK_LIB} -lblas 
 
 
-PROG = $(OUT)
-
 MOD = Parameters.o Globals.o umfpack.o Procedures.o 
 
 
@@ -13,12 +11,8 @@ SUBR = 	AllocateArrays.o SetParameters.o Grids.o IterateBellman.o HJBUpdate.o cu
 
 OBJ = $(MOD) $(SUBR)
 
-$(PROG).out: $(OBJ) Main.o
-	$(FC) $(FCFLAGS) -o $@ $^ $(LDFLAGS)
-Main.o: $(MOD)
-
-%: %.o
-	$(FC) $(FCFLAGS) -o $@ $^ $(LDFLAGS)
+Main: $(OBJ) Main.o
+	$(FC) $(LDFLAGS)   $^ -o  $@ $(FCFLAGS)
 
 %.o: %.f90
 	$(FC) $(FCFLAGS) -c $<
