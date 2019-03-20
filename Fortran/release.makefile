@@ -1,6 +1,6 @@
 FC = ifort
-FCFLAGS = -m64 -traceback -O3 -qopenmp -implicitnone  -Wl,-stack_size,0x100000000 -L/Volumes/FILES/Projects/Fortran/SuiteSparse/lib -lumfpack -lamd -lcholmod -lcolamd -lsuitesparseconfig -lblas 
-LDFLAFS = -m64 -traceback -O3 -qopenmp -implicitnone  -Wl,-stack_size,0x100000000 -L/Volumes/FILES/Projects/Fortran/SuiteSparse/lib -lumfpack -lamd -lcholmod -lcolamd -lsuitesparseconfig -lblas 
+FCFLAGS = -m64 -traceback -O3 -qopenmp -implicitnone   -lumfpack -lamd -lcholmod -lcolamd -lsuitesparseconfig -lblas 
+LDFLAFS = -m64 -traceback -O3 -qopenmp -implicitnone   -lumfpack -lamd -lcholmod -lcolamd -lsuitesparseconfig -lblas 
 # -O3
 
 PROG = $(OUT)
