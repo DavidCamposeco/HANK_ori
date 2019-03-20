@@ -1,6 +1,6 @@
 FC = ifort
-FCFLAGS = -m64 -traceback -O3 -openmp -implicitnone -xSSE4.2 -axAVX  -L${SUITESPARSE_LIB} -lumfpack -lamd -lcholmod -lcolamd -lsuitesparseconfig -L${LAPACK_LIB} -lblas 
-LDFLAFS = -m64 -traceback -O3 -openmp -implicitnone -xSSE4.2 -axAVX  -L${SUITESPARSE_LIB} -lumfpack -lamd -lcholmod -lcolamd -lsuitesparseconfig -L${LAPACK_LIB} -lblas 
+FCFLAGS = -m64 -traceback -O3 -qopenmp -implicitnone -xSSE4.2 -axAVX  -L${SUITESPARSE_LIB} -lumfpack -lamd -lcholmod -lcolamd -lsuitesparseconfig -L${LAPACK_LIB} -lblas 
+LDFLAFS = -m64 -traceback -O3 -qopenmp -implicitnone -xSSE4.2 -axAVX  -L${SUITESPARSE_LIB} -lumfpack -lamd -lcholmod -lcolamd -lsuitesparseconfig -L${LAPACK_LIB} -lblas 
 
 
 PROG = $(OUT)
