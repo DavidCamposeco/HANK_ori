@@ -1,0 +1,4 @@
+Fortran/FortranOutputDir/*
+*.o
+*.a
+Fortran/Main

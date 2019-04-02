@@ -14,7 +14,7 @@ REAL(8) 		:: ladriftB,ladriftF,lbdriftB,lbdriftF,lval,laudriftB,laudriftF,lbudri
 REAL(8), DIMENSION(nab) :: 	luvec,lbvec,lVvec,ldiag
 TYPE(tCSR_di), DIMENSION(ngpy) 	 :: AUMF     !umfpack type
 
- c = 0.0
+c = 0.0
 h = 0.0	
 d = 0.0
 u = 0.0
