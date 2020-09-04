@@ -1,3 +1,5 @@
+This code is a copy. Original code is available at http://www.princeton.edu/~moll/research.htm
+
 ------------------------------
 ANALYSIS ON SCF DATA
 ------------------------------
